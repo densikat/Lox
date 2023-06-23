@@ -136,7 +136,7 @@ public class Scanner {
                 } else if (isAlpha(c)) {
                     identifier();
                 } else {
-                    Lox.error(line, "Unexpected character.");
+                    System.out.println("Unexpected character at: " + line);
                 }
                 break;
         }
@@ -187,7 +187,8 @@ public class Scanner {
         }
 
         if (isAtEnd()) {
-            Lox.error(line, "Unterminated string.");
+            System.out.println("Unexpected character at: " + line);
+
             return;
         }
 
