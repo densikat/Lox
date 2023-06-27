@@ -1,13 +1,16 @@
-fun makeCounter() {
-  var i = 0;
-  fun count() {
-    i = i + 1;
-    print i;
+class Math {
+  init(val) {
+    this.val = val;
   }
 
-  return count;
+  square(n) {
+    return n * n;
+  }
+
+  squareVal() {
+    return this.val * this.val;
+  }
 }
 
-var counter = makeCounter();
-counter(); // "1".
-counter(); // "2".
+var m = Math(5);
+print m.squareVal(); // Prints "9".
