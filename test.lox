@@ -1,16 +1,14 @@
-class Math {
-  init(val) {
-    this.val = val;
-  }
-
-  square(n) {
-    return n * n;
-  }
-
-  squareVal() {
-    return this.val * this.val;
+class Doughnut {
+  cook() {
+    print "Fry until golden brown.";
   }
 }
 
-var m = Math(5);
-print m.squareVal(); // Prints "9".
+class BostonCream < Doughnut {
+  cook() {
+    super.cook();
+    print "Pipe full of custard and coat with chocolate.";
+  }
+}
+
+BostonCream().cook();
